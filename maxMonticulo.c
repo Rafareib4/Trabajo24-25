@@ -3,11 +3,6 @@
 #include <stdlib.h>
 #include "maxMonticulo.h"
 
-//2i + 2 es el hijo derecho del MaxMonticulo
-//2i + 1 es el hijo izquierdo del MaxMonticulo
-//(i-1)/2 es el padre del MaxMonticulo
-
-
 void nuevoMaxMonticulo(tipoMaxMonticulo* t, int nume)
 {
     t->array = (tipoElementoMaxMonticulo*)malloc(sizeof(tipoElementoMaxMonticulo) * nume);
