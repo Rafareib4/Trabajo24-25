@@ -1,11 +1,4 @@
-//fragmenta.c
-//Creado: Artem Pidlubnyy Lahodyn
-//v1
-//inicio: 4 oct 16:24
-//fin: 5 oct 13:30
-//v2
-//inicio: 6 oct 15:04
-//fin: 6 oct 19:41
+
 #include "fragmenta.h"
 #include <string.h>
 #include <stdio.h>
