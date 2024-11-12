@@ -1,4 +1,3 @@
-surgery,age,rectal_temp,pulse,respiratory_rate,temp_of_extremities,peripheral_pulse,pain,abdominal_distention,nasogastric_tube,rectal_exam_feces,packed_cell_volume,total_protein,outcome,surgical_lesion,lesion
 no,adult,38.5,66,28,cool,reduced,extreme_pain,severe,NA,decreased,45,8.4,died,no,11300
 yes,adult,39.2,88,20,NA,NA,mild_pain,slight,NA,absent,50,85,euthanized,no,2208
 no,adult,38.3,40,24,normal,normal,mild_pain,none,NA,normal,33,6.7,lived,no,0
