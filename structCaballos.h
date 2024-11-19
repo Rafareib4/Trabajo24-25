@@ -16,7 +16,7 @@ typedef struct Datos
     char heces [20];
     float volumenCelulas;
     float proteina;
-    char resultado[20];
+    bool resultado;
     bool lesionCirugia;
 
 }Datos;
