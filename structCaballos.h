@@ -4,6 +4,7 @@
 
 typedef struct Datos
 {
+    int num;
     bool cirugia;
     char edad[10];
     float temperaturaRectal;
