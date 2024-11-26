@@ -42,7 +42,7 @@ int main(){
         exit(-1); // Salida con error
     }
 
-
+    struct Datos caballos[MAX_CABALLOS];
     int num_caballos = 0;
     char res;
 
