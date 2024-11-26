@@ -89,7 +89,7 @@ int main(){
         printf("Qué número de K quieres usar (1 <= K < %d): ", numKnn);
         scanf("%d", &k);
         while(k >= numKnn || k < 1){
-            printf("Error, la K no es válida introdúcela de nuevo (1 <= K < %d): ", knn);
+            printf("Error, la K no es válida introdúcela de nuevo (1 <= K < %d): ", numKnn);
             scanf("%d", &k);
         }
         printf("Quieres usar Wilson si ejecutas otra vez knn s/n: ");
