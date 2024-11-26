@@ -81,7 +81,7 @@ int main(){
     float probabilidad;
     bool prediccion, check;
     char resW;
-    knn = num_caballos;
+    numKnn = num_caballos;
     contadorWilson = 0;
     do{
         contadorAciertos = 0;
