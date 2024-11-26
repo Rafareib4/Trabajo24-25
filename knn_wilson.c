@@ -12,7 +12,7 @@ bool convert_string_to_bool(char* textoFragmentado){
     return strcmp(textoFragmentado, "1") == 0 || strcmp(textoFragmentado, "1\n") == 0;
 }
 
-void imprimirDatos(Patient caballos[], int num_caballos){
+void imprimirDatos(Datos caballos[], int num_caballos){
     for (int i = 0; i < num_caballos; i++){
         printf("Datos del paciente %d: ", i + 1);
         printf("    Edad: %s ", caballos[i].edad);
@@ -42,7 +42,7 @@ int main(){
         exit(-1); // Salida con error
     }
 
-    struct Datos caballos[MAX_CABALLOS];
+	struct Datos caballos[MAX_CABALLOS];
     int num_caballos = 0;
     char res;
 
@@ -67,9 +67,6 @@ int main(){
         num_caballos++;
     }
 
-    // Imprime los datos de los caballos en la consola
-    imprimirDatos(caballos, num_caballos);
-
     normalizeData(caballos, num_caballos);
 
     //Calcular distancias
@@ -92,8 +89,6 @@ int main(){
             printf("Error, la K no es válida introdúcela de nuevo (1 <= K < %d): ", numKnn);
             scanf("%d", &k);
         }
-        printf("Quieres usar Wilson si ejecutas otra vez knn s/n: ");
-        scanf(" %c", &resW);
         int indice1, indice2;
         nuevaLista(&lista);
         for (indice1 = 0; indice1 < num_caballos; indice1++){
@@ -150,13 +145,14 @@ int main(){
                     dist_heces = 0;
                 }
                 dist_total = sqrt(dist_temperaturaRectal * dist_temperaturaRectal + dist_pulso * dist_pulso + dist_frecuenciaRespiracion * dist_frecuenciaRespiracion + dist_volumenCelulas * dist_volumenCelulas + dist_proteina*dist_proteina + dist_cirugia + dist_resultado + dist_lesionCirugia + dist_dolor + dist_distensionAbdominal + dist_edad + dist_temperaturaExtremidades + dist_tuboNasogastrico + dist_heces);
+                
                 elementoLista.distancia = dist_total;
-                elementoLista.stroke = caballos[indice2].stroke;
+                elementoLista.stroke = caballos[indice2].resultado;
                 insertar(&lista, elementoLista);
             }
-            check = lista.ini->elemento.resultado;
+            check = lista.ini->elemento.stroke;
             for (indice2 = 0; indice2 < k; indice2++){
-                if(lista.ini->elemento.resultado == 1){
+                if(check == 1){
                     contador1++;
                 }
                 else{
