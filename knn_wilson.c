@@ -147,12 +147,12 @@ int main(){
                 dist_total = sqrt(dist_temperaturaRectal * dist_temperaturaRectal + dist_pulso * dist_pulso + dist_frecuenciaRespiracion * dist_frecuenciaRespiracion + dist_volumenCelulas * dist_volumenCelulas + dist_proteina*dist_proteina + dist_cirugia + dist_resultado + dist_lesionCirugia + dist_dolor + dist_distensionAbdominal + dist_edad + dist_temperaturaExtremidades + dist_tuboNasogastrico + dist_heces);
                 
                 elementoLista.distancia = dist_total;
-                elementoLista.stroke = caballos[indice2].resultado;
+                elementoLista.resultado = caballos[indice2].resultado;
                 insertar(&lista, elementoLista);
             }
-            check = lista.ini->elemento.stroke;
+            check = lista.ini->elemento.resultado;
             for (indice2 = 0; indice2 < k; indice2++){
-                if(check == 1){
+		if (lista.ini -> elemento.resultado == 1){
                     contador1++;
                 }
                 else{
